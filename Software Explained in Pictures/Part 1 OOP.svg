@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg 
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100%" height="100%"
+	version="1.1" >
+	
+	<style>
+		.title{
+			font-size: 20px;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		}
+
+		.bullet{
+			font-size: 16px;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+		
+		.innards{
+			fill:none;
+			stroke:#a3a3a3;
+			stroke-miterlimit:10;
+			stroke-width:1.5px;
+		}
+		
+		.objCon1{
+			stroke: blue;
+			stroke-opacity: 1;
+			stroke-width: 10;
+			fill: none;
+		}
+
+		.objCon2{
+			stroke: red;
+			stroke-opacity: 1;
+			stroke-width: 10;
+			fill: none;
+		}
+
+		.objCon3{
+			stroke: green;
+			stroke-opacity: 1;
+			stroke-width: 10;
+			fill: none;
+		}
+
+		.msg1{
+			stroke: blue;
+			stroke-opacity: 1;
+			stroke-width: 8;
+			fill: blue;
+			fill-opacity:1;
+		}
+
+		.msg2{
+			stroke: red;
+			stroke-opacity: 1;
+			stroke-width: 8;
+			fill: red;
+			fill-opacity:1;
+		}
+		
+		.msg3{
+			stroke: green;
+			stroke-opacity: 1;
+			stroke-width: 8;
+			fill: green;
+			fill-opacity:1;
+		}
+		
+		@keyframes fadeIn {
+			from {visibility: hidden; opacity: 0;}
+			to {visibility: visible; opacity: 1;}
+		}
+
+		.fadeIn{
+			visibility: hidden;
+			animation-name: fadeIn;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes fadeOut {
+			from {visibility: visible; opacity: 1;}
+			to {visibility: hidden; opacity: 0;}
+		}
+
+		.fadeOut{
+			visibility: visible;
+			animation-name: fadeOut;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes fadeInAndOut {
+			0% {visibility: hidden; opacity: 0;}
+			10% {visibility: visible; opacity: 1;}
+			90% {visibility: visible; opacity: 1;}
+			100% {visibility: hidden; opacity: 0;}
+		}
+
+		.fadeInAndOut1{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut2{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut3{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 3s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut4{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 4s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut5{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut6{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 6s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut7{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 7s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut8{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 8s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut9{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 9s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut10{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 10s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut15{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 15s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut17{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 17s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation1 {
+			0%   { transform: translate(0px, 0px); }
+			40%  { transform: translate(0px, 0px); }
+			70%  { transform: translate(100px, 100px); }
+			80%  { transform: translate(100px, 100px); }
+			99%  { transform: translate(0px, 0px); }
+			100% { visibility: hidden; }
+		}
+
+		.msgAnimation1{
+			animation-name: msgAnimation1;
+			animation-duration: 5s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation2 {
+			40%  { visibility: visible; transform: translate(0px, 0px); }
+			70%  { transform: translate(20px, 20px); }
+			100% { transform: translate(0px, 0px); visibility: hidden; }
+		}
+
+		.msgAnimation2{
+			visibility: hidden;
+			animation-name: msgAnimation2;
+			animation-duration: 1s;
+			animation-iteration-count: 3;
+		}
+		
+		@keyframes msgAnimation3 {
+			10%  { transform: translate(0px, 0px); }
+			20%  { transform: translate(100px, 100px); }
+			90%  { transform: translate(100px, 100px); }
+			100% { transform: translate(0px, 0px); }
+		}
+
+		.msgAnimation3{
+			animation-name: msgAnimation3;
+			animation-duration: 16s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation4 {
+			19%  { visibility: hidden; }
+			20%  { visibility: visible; transform: translate(0px, 0px); }
+			30%  { transform: translate(120px, 200px); }
+			80%  { transform: translate(120px, 200px); }
+			90%  { transform: translate(0px, 0px); }
+			91%  { visibility: hidden; }
+		}
+
+		.msgAnimation4{
+			visibility: hidden;
+			animation-name: msgAnimation4;
+			animation-duration: 16s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation5 {
+			29%  { visibility: hidden; }
+			30%  { visibility: visible; transform: translate(0px, 0px); }
+			39%  { transform: translate(-250px, 90px); }
+			46%  { transform: translate(-250px, 90px); }
+			57%  { transform: translate(0px, 0px); }
+			58% { visibility: hidden; }
+		}
+
+		.msgAnimation5{
+			visibility: hidden;
+			animation-name: msgAnimation5;
+			animation-duration: 16s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation6 {
+			54%  { visibility: hidden; }
+			55%  { visibility: visible; transform: translate(0px, 0px); }
+			65%  { transform: translate(100px, 270px); }
+			73%  { transform: translate(100px, 270px); }
+			77%  { transform: translate(0px, 0px); }
+			78% { visibility: hidden; }
+		}
+
+		.msgAnimation6{
+			visibility: hidden;
+			animation-name: msgAnimation6;
+			animation-duration: 16s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes insideAnimation1 {
+			0%   { visibility: hidden; }
+			20%  { visibility: hidden; }
+			22%  { visibility: visible; }
+			88%  { visibility: visible; }
+			90%  { visibility: hidden; }
+			100% { visibility: hidden; }
+		}
+
+		.insideAnimation1{
+			visibility: hidden;
+			animation-name: insideAnimation1;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+
+		.p1{ animation-delay: 3s; }
+		.p1 .b1{ }
+		.p1 .i1{ }
+		.p1 .b2{ animation-delay: 7s; }
+		.p1 .i2{ animation-delay: 8s; }
+		.p1 .b3{ animation-delay: 12s; }
+		.p1 .i3{ animation-delay: 13s; }
+
+		.p2{ animation-delay: 18s; }
+		.p2 .b1{ }
+		.p2 .i1{ }
+		.p2 .i2{ animation-delay: 22s; }
+		.p2 .b2{ animation-delay: 23s; }
+		.p2 .i3{ animation-delay: 25s; }
+		.p2 .b3{ animation-delay: 28s; }
+		.p2 .i4{ animation-delay: 29s; }
+		
+		.p3{ animation-delay: 35s; }
+		.p3 .b1{ }
+		.p3 .i1{ animation-delay: 40s; }
+		.p3 .i2{ animation-delay: 43s; }
+		.p3 .i3{ animation-delay: 45s; }
+		.p3 .i4{ animation-delay: 47s; }
+		.p3 .i5{ animation-delay: 49s; }
+		.p3 .i6{ animation-delay: 52s; }
+		
+	</style>
+		
+	<g transform="translate(50, 50)">
+		<text class="title" x="0" y="20">Computer Programming Explained in Pictures</text>
+		<text class="title fadeOut" style="animation-delay:15s;" x="80" y="50">By Martin Halliday</text>
+		
+		<g class="p1 fadeInAndOut15">
+			<use xlink:href="#objInside" class="i2 fadeInAndOut5" transform="translate(450, 200) scale(0.12)"/>
+			<use xlink:href="#objBase" class="i1" transform="translate(450, 200) scale(0.15)"/>
+			<use xlink:href="#objCon1" class="i3 fadeIn" transform="translate(450, 200) scale(0.17)"/>
+			<text class="b1 bullet" transform="translate(10, 100)">Software is built from objects</text>
+			<text class="b2 bullet fadeIn" transform="translate(10, 130)">They have complicated stuff inside</text>
+			<text class="b3 bullet fadeIn" transform="translate(10, 160)">And a specific shape</text>
+		</g>
+	
+		<g class="p2 fadeInAndOut17">
+			<use xlink:href="#objInside" class="i3 fadeInAndOut2" transform="translate(500, 250) scale(0.08)"/>
+			<use xlink:href="#objBase" class="i1" transform="translate(500, 250) scale(0.1)"/>
+			<use xlink:href="#objCon1" class="i1" transform="translate(500, 250) scale(0.12)"/>
+			<g class="i2 msgAnimation1"><use xlink:href="#msg1" transform="translate(385, 140) rotate(40) scale(0.02,0.05)"/></g>
+			<g class="i4 msgAnimation2"><use xlink:href="#msg3" transform="translate(385, 140) rotate(40) scale(0.02,0.05)"/></g>
+			<text class="b1 bullet" transform="translate(10, 100)">You can make a request to an object by passing it a message</text>
+			<text class="b2 bullet fadeIn" transform="translate(10, 130)">The object will process your message and reply</text>
+			<text class="b3 bullet fadeIn" transform="translate(10, 160)">Messages must be the right shape!</text>
+		</g>
+	
+		<g class="p3 fadeIn">
+			<g class="i3 fadeInAndOut15"><use xlink:href="#objInside" transform="translate(500, 200) scale(0.08)"/></g>
+			<g class="i4 fadeInAndOut10"><use xlink:href="#objInside" transform="translate(650, 450) scale(0.08)"/></g>
+			<g class="i5 fadeInAndOut3"><use xlink:href="#objInside" transform="translate(350, 550) scale(0.08)"/></g>
+			<g class="i6 fadeInAndOut4"><use xlink:href="#objInside" transform="translate(750, 720) scale(0.08)"/></g>
+
+			<g class="i2 msgAnimation3"><use xlink:href="#msg1" transform="translate(385, 90) rotate(40) scale(0.02,0.05)"/></g>
+			<g class="i2 msgAnimation4"><use xlink:href="#msg2" transform="translate(520, 220) rotate(55) scale(0.02,0.05)"/></g>
+			<g class="i2 msgAnimation5"><use xlink:href="#msg3" transform="translate(620, 460) rotate(-25) scale(0.02,0.05)"/></g>
+			<g class="i2 msgAnimation6"><use xlink:href="#msg1" transform="translate(640, 460) rotate(60) scale(0.02,0.05)"/></g>
+
+			<use xlink:href="#objBase" class="i1" transform="translate(500, 200) scale(0.1)"/>
+			<use xlink:href="#objBase" class="i1" transform="translate(650, 450) scale(0.1)"/>
+			<use xlink:href="#objBase" class="i1" transform="translate(350, 550) scale(0.1)"/>
+			<use xlink:href="#objBase" class="i1" transform="translate(750, 720) scale(0.1)"/>
+			
+			<use xlink:href="#objCon1" class="i1" transform="translate(500, 200) scale(0.12)"/>
+			<use xlink:href="#objCon2" class="i1" transform="translate(650, 450) scale(0.12) rotate(11)"/>
+			<use xlink:href="#objCon3" class="i1" transform="translate(350, 550) scale(0.12) rotate(10)"/>
+			<use xlink:href="#objCon1" class="i1" transform="translate(750, 720) scale(0.12) rotate(20)"/>
+			
+			<text class="b1 bullet" transform="translate(10, 100)">Objects can pass messages to other</text>
+			<text class="b1 bullet" transform="translate(10, 120)">objects to get help with processing</text>
+			<text class="b1 bullet" transform="translate(10, 140)">your request</text>
+		</g>
+	</g>
+	
+	<defs id="objComponents">
+		<g id="objBase"><use xlink:href="#sphere" /></g>
+
+		<g id="objInside" transform="scale(35.4) translate(-28.3,-28.3)">
+			<circle class="innards" cx="28.2" cy="28.3" r="27.5"/>
+			<ellipse class="innards" cx="28.2" cy="28.3" rx="27.5" ry="12.6"/>
+			<line class="innards" x1="28.3" y1="55.8" x2="28.3" y2="0.8"/>
+			<circle class="innards" cx="28.3" cy="28.7" r="16.3"/>
+			<ellipse class="innards" cx="28.3" cy="28.2" rx="27.5" ry="12.6" transform="translate(-11.7 28.2) rotate(-45)"/>
+			<ellipse class="innards" cx="28.3" cy="28.3" rx="12.6" ry="27.5" transform="translate(-11.7 28.2) rotate(-45)"/>
+		</g>
+
+		<g id="objCon1">
+			<use xlink:href="#roundTube" transform="translate(-650,-650) rotate(40) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#triangleTube" transform="translate(870,150) rotate(-170) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#squareTube" transform="translate(0,-900) rotate(90) scale(0.095, 0.17)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#triangleTube" transform="translate(860,-245) rotate(160) scale(0.1, 0.15)" style="stroke:red; fill:red;" />
+			<use xlink:href="#squareTube" transform="translate(-900,200) rotate(-10) scale(0.1, 0.17)" style="stroke:green; fill:green;" />
+			<use xlink:href="#roundTube" transform="translate(0,855) rotate(-90) scale(0.1, 0.08)" style="stroke:green; fill:green;" />
+			<use xlink:href="#triangleTube" transform="translate(640,-640) rotate(130) scale(0.1, 0.07)" style="stroke:green; fill:green;" />
+		</g>
+
+		<g id="objCon2">
+			<use xlink:href="#squareTube" transform="translate(-640,-640) rotate(45) scale(0.1, 0.15)" style="stroke:red; fill:red;" />
+			<use xlink:href="#squareTube" transform="translate(-900,-200) rotate(10) scale(0.1, 0.12)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#roundTube" transform="translate(640,-640) rotate(135) scale(0.1, 0.12)" style="stroke:green; fill:green;" />
+			<use xlink:href="#triangleTube" transform="translate(-180,870) rotate(-75) scale(0.1, 0.12)" style="stroke:red; fill:red;" />
+		</g>
+
+		<g id="objCon3">
+			<use xlink:href="#triangleTube" transform="translate(790,-400) rotate(150) scale(0.1, 0.15)" style="stroke:green; fill:green;" />
+			<use xlink:href="#roundTube" transform="translate(750,500) rotate(-147) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#roundTube" transform="translate(542,742) rotate(-128) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
+		</g>
+
+		<g id="msg1"><use xlink:href="#roundTube" transform="scale(1, 0.2)" class="msg1" /></g>
+		<g id="msg2"><use xlink:href="#squareTube" transform="scale(1, 0.3)" class="msg2" /></g>
+		<g id="msg3"><use xlink:href="#triangleTube" transform="scale(1, 0.35)" class="msg3" /></g>
+
+	</defs>
+	
+	<defs>
+		<g id="roundTube" transform="scale(2) translate(-500, -500)">
+			<path d="M 100 0 h 800 c 100 100 100 900 0 1000 h -800 c 100 -100 100 -900 0 -1000" mask="url(#centerFadeMask)" />
+			<path d="M 100 0 c -100 100 -100 900 0 1000 c 100 -100 100 -900 0 -1000 z" fill-opacity="0.2"/>
+		</g>
+		
+		<g id="squareTube" transform="scale(2) translate(-500, -500)">
+			<path d="M 100 0 h 800 l 100 500 l -100 500 h -800 l 100 -500 z" mask="url(#halfAndHalfMask)" />
+			<path d="M 100 0 l -100 500 l 100 500 l 100 -500 z" fill-opacity="0.2"/>
+		</g>
+
+		<g id="triangleTube" transform="scale(2) translate(-500, -500)">
+			<path d="M 0 0 h 800 l 200 500 l -200 500 h -800 l 200 -500 z" mask="url(#halfAndHalfMask)" />
+			<path d="M 0 0 v 1000 l 200 -500 z" fill-opacity="0.2"/>
+		</g>
+
+		<linearGradient id="centerFadeGradient" x1="0" x2="0" y1="0" y2="1" >
+		  <stop offset="0" stop-color="white" stop-opacity="0.6" />
+		  <stop offset="0.5" stop-color="white" stop-opacity="0.1" />
+		  <stop offset="1" stop-color="white" stop-opacity="0.6" />
+		</linearGradient>
+		
+		<mask id="centerFadeMask">
+			<rect x="0" y="0" width="1000" height="1000" fill="url(#centerFadeGradient)"  />
+		</mask>
+
+		<linearGradient id="halfAndHalfGradient" x1="0" x2="0" y1="0" y2="1" >
+		  <stop offset="0" stop-color="white" stop-opacity="0.4" />
+		  <stop offset="0.4999" stop-color="white" stop-opacity="0.4" />
+		  <stop offset="0.5" stop-color="white" stop-opacity="0.6" />
+		  <stop offset="1" stop-color="white" stop-opacity="0.6" />
+		</linearGradient>
+
+		<mask id="halfAndHalfMask">
+			<rect x="0" y="0" width="1000" height="1000" fill="url(#halfAndHalfGradient)"  />
+		</mask>
+	</defs>
+
+	<defs>
+		<g id="sphere" transform=" scale(4.96) translate(-443, -410)" >
+			<path
+			   style="opacity:0; fill:#2068ff; fill-opacity:1; fill-rule:evenodd; stroke:#ff00ff; stroke-width:20; stroke-linecap:square; stroke-linejoin:bevel; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1"
+			   d="M 607.24504,873.14056 A 139.16032,120.18391 0 1 1 328.92439,873.14056 A 139.16032,120.18391 0 1 1 607.24504,873.14056 z" />
+			<g transform="translate(55.801618,41.851214)">
+				<path
+					clip-path="url(#sphereClipPath1)"
+					transform="translate(99.846634,-36.11474)"
+					d="M 488.61119,404.42126 A 201.81767,201.81767 0 1 1 84.975845,404.42126 A 201.81767,201.81767 0 1 1 488.61119,404.42126 z"
+					style="opacity:1; fill:#ffffff; fill-opacity:0.58431373; fill-rule:evenodd; stroke:#4fbbff; stroke-width:20; stroke-linecap:square; stroke-linejoin:bevel; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1; filter:url(#sphereFilter1)" />
+				<path
+					clip-path="url(#sphereClipPath2)"
+					transform="matrix(1.534752,0,0,1.1906686,-234.06868,-88.490894)"
+					d="M 518.35275,334.31616 A 112.59301,112.59301 0 1 1 293.16673,334.31616 A 112.59301,112.59301 0 1 1 518.35275,334.31616 z"
+					style="opacity:1; fill:url(#sphereGradient2); fill-opacity:1; fill-rule:evenodd; stroke:none; stroke-width:20; stroke-linecap:square; stroke-linejoin:bevel; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1; filter:url(#sphereFilter2)" />
+				<path
+					transform="matrix(0.6598817,0,0,0.6598817,-28.986829,-253.46166)"
+					d="M 539.77334,769.82458 A 37.952812,37.952812 0 1 1 463.86771,769.82458 A 37.952812,37.952812 0 1 1 539.77334,769.82458 z"
+					style="opacity:0.49361704; fill:#ffffff; fill-opacity:1; fill-rule:evenodd; stroke:none; stroke-width:1px; stroke-linecap:butt; stroke-linejoin:miter; stroke-opacity:1; filter:url(#sphereFilter3)" />
+			</g>
+		</g>
+
+		<filter id="sphereFilter1">
+		  <feGaussianBlur stdDeviation="16.945414" />
+		</filter>
+		   
+		<filter id="sphereFilter2">
+			<feGaussianBlur stdDeviation="2.2818188" />
+		</filter>
+		
+		<filter id="sphereFilter3" x="-0.12" width="1.24" y="-0.12" height="1.24">
+		  <feGaussianBlur stdDeviation="3.7952812" />
+		</filter>
+		
+		<linearGradient id="sphereGradient1">
+		  <stop offset="0" style="stop-color:#4fbbff; stop-opacity:1;" />
+		  <stop offset="1" style="stop-color:#4fbbff; stop-opacity:0" />
+		</linearGradient>
+		
+		<linearGradient id="sphereGradient2" xlink:href="#sphereGradient1" gradientUnits="userSpaceOnUse"
+		   x1="405.75974" y1="156.40941" x2="405.75974" y2="446.90918" />
+		   
+		<clipPath id="sphereClipPath1" clipPathUnits="userSpaceOnUse" >
+		  <path
+			 d="M 488.61119,404.42126 A 201.81767,201.81767 0 1 1 84.975845,404.42126 A 201.81767,201.81767 0 1 1 488.61119,404.42126 z"
+			 style="opacity:1; fill:#ffffff; fill-opacity:0.58431373; fill-rule:evenodd; stroke:#4fbbff; stroke-width:20; stroke-linecap:square; stroke-linejoin:bevel; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1; filter:url(#sphereFilter1)" />
+		</clipPath>
+		
+		<clipPath id="sphereClipPath2" clipPathUnits="userSpaceOnUse">
+		  <path
+			 transform="matrix(0.6515711,0,0,0.8398643,217.56956,43.98886)"
+			 d="M 488.61119,404.42126 A 201.81767,201.81767 0 1 1 84.975845,404.42126 A 201.81767,201.81767 0 1 1 488.61119,404.42126 z"
+			 style="opacity:1; fill:#ffffff; fill-opacity:0.58431373; fill-rule:evenodd; stroke:#4fbbff; stroke-width:20; stroke-linecap:square; stroke-linejoin:bevel; stroke-miterlimit:4; stroke-dasharray:none; stroke-opacity:1; filter:url(#sphereFilter1)" />
+		</clipPath>
+		
+	</defs>
+	
+</svg>
