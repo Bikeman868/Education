@@ -7,7 +7,7 @@
 	xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="1000" height="2000"
+	width="1000" height="1500"
 	version="1.1" >
 	
 	<style>
@@ -213,6 +213,20 @@
 			animation-fill-mode: forwards;
 		}
 		
+		.fadeInAndOut30{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 30s;
+			animation-fill-mode: forwards;
+		}
+		
+		.fadeInAndOut35{
+			visibility: hidden;
+			animation-name: fadeInAndOut;
+			animation-duration: 35s;
+			animation-fill-mode: forwards;
+		}
+		
 		@keyframes msgAnimation1 {
 			0%   { transform: translate(0px, 0px); }
 			40%  { transform: translate(0px, 0px); }
@@ -302,6 +316,54 @@
 			animation-fill-mode: forwards;
 		}
 		
+		@keyframes msgAnimation7 {
+			25%  { transform: translate(0px, 0px); }
+			28%  { transform: translate(220px, 220px); }
+			92%  { transform: translate(220px, 220px); }
+			99%  { transform: translate(0px, 0px); }
+			100% { visibility: hidden; }
+		}
+
+		.msgAnimation7{
+			animation-name: msgAnimation7;
+			animation-duration: 25s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation8 {
+			25%  { transform: translate(0px, 0px); }
+			28%  { transform: translate(220px, 220px); }
+			58%  { transform: translate(220px, 220px); }
+			60%  { transform: translate(220px, 740px); }
+			80%  { transform: translate(220px, 740px); }
+			82%  { transform: translate(220px, 220px); }
+			92%  { transform: translate(220px, 220px); }
+			99%  { transform: translate(0px, 0px); }
+			100% { visibility: hidden; }
+		}
+
+		.msgAnimation8{
+			animation-name: msgAnimation8;
+			animation-duration: 25s;
+			animation-fill-mode: forwards;
+		}
+		
+		@keyframes msgAnimation9 {
+			57%  { visibility: hidden; }
+			58%  { transform: translate(0px, 0px); visibility: visible; }
+			60%  { transform: translate(0px, 500px); }
+			80%  { transform: translate(0px, 500px); }
+			82%  { transform: translate(0px, 0px); }
+			83%  { visibility: hidden; }
+		}
+
+		.msgAnimation9{
+			visibility: hidden;
+			animation-name: msgAnimation9;
+			animation-duration: 25s;
+			animation-fill-mode: forwards;
+		}
+		
 		@keyframes insideAnimation1 {
 			0%   { visibility: hidden; }
 			20%  { visibility: hidden; }
@@ -346,6 +408,13 @@
 		.p3 .i5{ animation-delay: 61s; }
 		.p3 .i6{ animation-delay: 64s; }
 		
+		.p4{ animation-delay: 75s; }
+		.p4 .b1{ }
+		.p4 .i1{ animation-delay: 79s; }
+		.p4 .b2{ animation-delay: 81s; }
+		.p4 .i2{ animation-delay: 84s; }
+		.p4 .b3{ animation-delay: 89s; }
+		.p4 .i3{ animation-delay: 90s; }
 	</style>
 		
 	<g transform="translate(50, 50)">
@@ -355,7 +424,7 @@
 		<g class="p1 fadeInAndOut25">
 			<use xlink:href="#objInside" class="i2 fadeIn" transform="translate(550, 200) scale(0.1)"/>
 			<use xlink:href="#objBase" class="i1" transform="translate(550, 200) scale(0.15)"/>
-			<use xlink:href="#objCon1" class="i3 fadeIn" transform="translate(550, 200) scale(0.17)"/>
+			<use xlink:href="#objCon1" class="i3 fadeIn" transform="translate(550, 200) scale(0.175)"/>
 			<text class="b1 bullet" transform="translate(10, 100)">Software is made out of building blocks called objects</text>
 			<path class="b1 callout" d="M 740 170 l 20 -10 M 740 170 l 20 15 M 740 170 c 150 20 180 65 170 100" />
 			<text class="b1 label" transform="translate(800, 300)">This is an object</text>
@@ -371,16 +440,16 @@
 	
 		<g class="p2 fadeInAndOut20">
 			<use xlink:href="#objInside" class="i3 fadeInAndOut2" transform="translate(500, 250) scale(0.08)"/>
-			<use xlink:href="#objBase" class="i1" transform="translate(500, 250) scale(0.1)"/>
-			<use xlink:href="#objCon1" class="i1" transform="translate(500, 250) scale(0.12)"/>
 			<g class="i2 msgAnimation1"><use xlink:href="#msg1" transform="translate(385, 140) rotate(40) scale(0.02,0.05)"/></g>
 			<g class="i4 msgAnimation2"><use xlink:href="#msg3" transform="translate(385, 140) rotate(40) scale(0.02,0.05)"/></g>
+			<use xlink:href="#objBase" class="i1" transform="translate(500, 250) scale(0.1)"/>
+			<use xlink:href="#objCon1" class="i1" transform="translate(500, 250) scale(0.12)"/>
 			<text class="b1 bullet" transform="translate(10, 100)">You can make a request to an object by passing it a message</text>
 			<text class="b2 bullet fadeIn" transform="translate(10, 130)">The object will process your message and reply</text>
 			<text class="b3 bullet fadeIn" transform="translate(10, 160)">Messages must be the right shape!</text>
 		</g>
 	
-		<g class="p3 fadeIn">
+		<g class="p3 fadeInAndOut30">
 			<g class="i3 fadeInAndOut15"><use xlink:href="#objInside" transform="translate(500, 200) scale(0.08)"/></g>
 			<g class="i4 fadeInAndOut10"><use xlink:href="#objInside" transform="translate(650, 450) scale(0.08)"/></g>
 			<g class="i5 fadeInAndOut3"><use xlink:href="#objInside" transform="translate(350, 550) scale(0.08)"/></g>
@@ -405,6 +474,26 @@
 			<text class="b1 bullet" transform="translate(10, 120)">objects to get help with processing</text>
 			<text class="b1 bullet" transform="translate(10, 140)">your request</text>
 		</g>
+
+		<g class="p4 fadeInAndOut35">
+			<use xlink:href="#objBase" class="i2 fadeIn" transform="translate(650, 350) scale(0.2)"/>
+			<use xlink:href="#objCon1" class="i2 fadeIn" transform="translate(650, 350) scale(0.24)"/>
+			<use xlink:href="#objBase" class="i3 fadeIn" transform="translate(650, 850) scale(0.2)"/>
+			<use xlink:href="#objCon2" class="i3 fadeIn" transform="translate(650, 850) scale(0.24) rotate(45)"/>
+			
+			<g class="i1 msgAnimation8">
+				<use xlink:href="#objBase" transform="translate(420, 110) scale(0.02)"/>
+				<use xlink:href="#objCon3" transform="translate(420, 110) scale(0.024)"/>
+			</g>
+			<g class="i1 msgAnimation7"><use xlink:href="#msg1" transform="translate(420, 110) rotate(40) scale(0.08,0.20)"/></g>
+			<g class="i1 msgAnimation9"><use xlink:href="#msg2" transform="translate(650, 370) rotate(-90) scale(0.08,0.20)"/></g>
+			
+			<text class="b1 bullet" transform="translate(10, 100)">Messages often contain objects</text>
+			<text class="b2 bullet fadeIn" transform="translate(10, 130)">When these messages are sent as requests</text>
+			<text class="b2 bullet fadeIn" transform="translate(10, 150)">the receiving object can use</text>
+			<text class="b2 bullet fadeIn" transform="translate(10, 170)">objects in the message</text>
+			<text class="b3 bullet fadeIn" transform="translate(10, 200)">Or pass them on in other requests</text>
+		</g>
 	</g>
 	
 	<defs id="objComponents">
@@ -420,13 +509,13 @@
 		</g>
 
 		<g id="objCon1">
-			<use xlink:href="#roundTube" transform="translate(-650,-650) rotate(40) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
+			<use xlink:href="#roundTube" transform="translate(-645,-645) rotate(44) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
 			<use xlink:href="#triangleTube" transform="translate(870,150) rotate(-170) scale(0.1, 0.1)" style="stroke:blue; fill:blue;" />
 			<use xlink:href="#squareTube" transform="translate(0,-900) rotate(90) scale(0.095, 0.17)" style="stroke:blue; fill:blue;" />
-			<use xlink:href="#triangleTube" transform="translate(860,-245) rotate(160) scale(0.1, 0.15)" style="stroke:red; fill:red;" />
-			<use xlink:href="#squareTube" transform="translate(-900,200) rotate(-10) scale(0.1, 0.17)" style="stroke:green; fill:green;" />
-			<use xlink:href="#roundTube" transform="translate(0,855) rotate(-90) scale(0.1, 0.08)" style="stroke:green; fill:green;" />
-			<use xlink:href="#triangleTube" transform="translate(640,-640) rotate(130) scale(0.1, 0.07)" style="stroke:green; fill:green;" />
+			<use xlink:href="#triangleTube" transform="translate(850,-240) rotate(163) scale(0.1, 0.15)" style="stroke:red; fill:red;" />
+			<use xlink:href="#squareTube" transform="translate(-885,190) rotate(-10) scale(0.1, 0.17)" style="stroke:green; fill:green;" />
+			<use xlink:href="#roundTube" transform="translate(0,900) rotate(-90) scale(0.1, 0.08)" style="stroke:green; fill:green;" />
+			<use xlink:href="#triangleTube" transform="translate(625,-625) rotate(132) scale(0.1, 0.07)" style="stroke:green; fill:green;" />
 		</g>
 
 		<g id="objCon2">
